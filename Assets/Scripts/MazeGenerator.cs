@@ -43,7 +43,7 @@ public class MazeGenerator : MonoBehaviour
         MakeMaze();
 
         GameObject p = GameObject.Instantiate(player);
-        p.transform.position = new Vector3(2.91f, 1f, 4.6f);
+        p.transform.position = new Vector3(2.91f, 1.4f, 3f);
 
         GameObject e = GameObject.Instantiate(enemy);
         e.transform.position = new Vector3(47f, 1.2f, 47f);
