@@ -13,6 +13,7 @@ public class MazeGenerator : MonoBehaviour
     public GameObject[] tiles;
 
     public GameObject player;
+    public GameObject enemy;
 
     const int N = 1;
     const int E = 2;
@@ -43,6 +44,9 @@ public class MazeGenerator : MonoBehaviour
 
         GameObject p = GameObject.Instantiate(player);
         p.transform.position = new Vector3(2.91f, 1f, 4.6f);
+
+        GameObject e = GameObject.Instantiate(enemy);
+        e.transform.position = new Vector3(47f, 1.2f, 47f);
     }
 
     private List<Vector2> CheckNeighbors(Vector2 cell, List<Vector2> unvisited) {
@@ -122,7 +126,7 @@ public class MazeGenerator : MonoBehaviour
 
                 tile.transform.Translate(new Vector3 (j*tile_size, 0, i * tile_size));
                 tile.name += " " + i.ToString() + ' ' + j.ToString();
-                tile.GetComponentInChildren<NavMeshSurface>().BuildNavMesh();
+                //tile.GetComponentInChildren<NavMeshSurface>().BuildNavMesh();
                
             }
 
